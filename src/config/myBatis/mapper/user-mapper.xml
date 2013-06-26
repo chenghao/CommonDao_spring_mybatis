@@ -32,4 +32,8 @@
 	<delete id="deleteUserById" parameterType="Integer">
 		delete from user where id = #{id}
 	</delete>
+	
+	<select id="getUserCount" parameterType="String" resultType="Integer">
+		select count(1) from user;
+	</select>
 </mapper>

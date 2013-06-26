@@ -36,4 +36,10 @@ public interface IUserService {
 	 * @return
 	 */
 	List<User> getUsers();
+	
+	/**
+	 * 获取用户数据
+	 * @return
+	 */
+	int getUserCount();
 }

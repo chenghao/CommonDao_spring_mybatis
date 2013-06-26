@@ -116,5 +116,30 @@ public interface ICommonDao<T extends Base> {
 	 * @return	T实体对象的集合
 	 */
 	List<T> findByEntityList(String namespace, T entity);
+	
+	/**
+	 * 根据fieldName查询
+	 * @param namespace	命名空间+ID
+	 * @param fieldName	字段名
+	 * @return	Object
+	 */
+	Object findByFieldObject(String namespace, Object fieldName);
+	
+	/**
+	 * 根据map查询
+	 * @param namespace	命名空间+ID
+	 * @param map		map对象
+	 * @return	Object
+	 */
+	Object findByMapObject(String namespace, Map<String, Object> map);
+	
+	/**
+	 * 根据实体对象查询
+	 * @param namespace	命名空间+ID
+	 * @param entity	实体对象
+	 * @return	Object
+	 */
+	Object findByEntityObject(String namespace, T entity);
 
+	 
 }

@@ -76,4 +76,19 @@ public class CommonDao extends BaseDao implements ICommonDao<Base> {
 		return getSqlSession().selectList(namespace, entity);
 	}
 
+	@Override
+	public Object findByFieldObject(String namespace, Object fieldName) {
+		return getSqlSession().selectOne(namespace, fieldName);
+	}
+
+	@Override
+	public Object findByMapObject(String namespace, Map<String, Object> map) {
+		return getSqlSession().selectOne(namespace, map);
+	}
+
+	@Override
+	public Object findByEntityObject(String namespace, Base entity) {
+		return getSqlSession().selectOne(namespace, entity);
+	}
+
 }

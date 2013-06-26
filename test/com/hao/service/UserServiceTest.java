@@ -62,5 +62,11 @@ public class UserServiceTest extends BaseTest {
 			System.err.println(user.getId() + "--" + user.getName() + "--" + user.getAge() + "--" + user.getSex() + "--" + user.getCreateDate());
 		}
 	}
+	
+	@Test
+	public void testGetUserCount() {
+		int count = userService.getUserCount();
+		System.out.println(count);
+	}
 
 }

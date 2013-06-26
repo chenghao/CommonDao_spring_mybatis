@@ -53,4 +53,10 @@ public class UserService implements IUserService {
 		return commonDao.findByFieldList("user.findUsers", "");
 	}
 
+	@Override
+	public int getUserCount() {
+		int count = (int) commonDao.findByFieldObject("user.getUserCount", "");
+		return count;
+	}
+
 }
